@@ -3,7 +3,7 @@ import mongodb from "@fastify/mongodb";
 
 export default fp<any>(async (fastify) => {
   fastify.register(mongodb, {
-    url: "mongodb+srv://mhosmalek:LV8Sduyf6g3fejCd@cluster0.vvvcesp.mongodb.net/",
+    url: process.env.MONGO_DB_URL,
     name: "vfs-appointments",
   });
 });
